@@ -68,6 +68,8 @@ TEMPLATES = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = ['outro.backends.EmailBackend']
+
 WSGI_APPLICATION = 'social_media_for_IOS.wsgi.application'
 
 

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" style="text-align:center;">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            {{form}}
+        </div>
+        <input type="submit" value="Изменить">
+    </form>
+    <br>
+    <br>
+    <p>{{ message }}</p>
+</div>
+{% endblock %}

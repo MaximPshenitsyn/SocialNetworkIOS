@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" style="text-align:center;">
+    <p>Имя: {{name}}</p>
+    <p>Почта: {{email}}</p>
+    <p>Роль: {{role}}</p>
+    <a href="/profile/edit/">Редактировать</a>
+</div>
+{% endblock %}

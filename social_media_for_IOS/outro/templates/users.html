@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Неподтверждённые пользователи</h2>
+{% for user in not_accepted_users %}
+    <p>{{user.username}} | {{user.email}} | <a href="accept-user/{{user.email}}">Принять</a> | <a href="refuse-user/{{user.email}}">Отклонить</a></p>
+{% endfor %}
+
+<h2>Все пользователи</h2>
+{% for user in accepted_users %}
+    <p>{{user.username}} | {{user.email}}  <a href="refuse-user/{{user.email}}">Удалить</a></p>
+{% endfor %}
+{% endblock %}
